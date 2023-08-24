@@ -2,18 +2,23 @@
   "manifest_version": 2,
   "name": "ASL buddy",
   "version": "1.0",
-  "description": "Extension for ASL conversion to text and speech in real time",
+  "description":"An extension to assist in online video calls for the communicatively impaired",
   "permissions": [
     "activeTab",
-    "videoCapture",
-    "storage"
+    "storage",
+    "webNavigation"
   ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_idle"
     }
   ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
