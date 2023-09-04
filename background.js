@@ -1,4 +1,5 @@
-//WebRTC connection establishment detection
+// background.js
+
 function sendMessageToContentScript(tabId, message, callback) {
   chrome.tabs.sendMessage(tabId, message, callback);
 }
@@ -9,7 +10,7 @@ function detectWebRTCConnection(tabId) {
     { checkWebRTCConnection: true },
     function (response) {
       if (response && response.webRTCConnected) {
-        alert("WebRTC connection detected.");
+        alert("Start the camera")
       }
     }
   );
