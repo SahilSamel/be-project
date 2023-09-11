@@ -13,10 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
         sendMessageToContentScript(tabId, { startCameraStream: true });
       }
     });
+    chrome.browserAction.setBadgeText({ text: "ON" });
     window.close();
   });
 
   closeButton.addEventListener("click", function () {
+    chrome.browserAction.setBadgeText({ text: "OFF" });
     window.close();
   });
 });

@@ -7,7 +7,8 @@
     "activeTab",
     "storage",
     "webNavigation",
-    "tabs"
+    "tabs",
+    "notifications"
   ],
   "content_scripts": [
     {

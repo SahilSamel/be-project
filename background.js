@@ -10,7 +10,12 @@ function detectWebRTCConnection(tabId) {
     { checkWebRTCConnection: true },
     function (response) {
       if (response && response.webRTCConnected) {
-        alert("Start the camera")
+        chrome.notifications.create({
+          type: "basic",
+          iconUrl: "/images/icon48.png",
+          title: "ASL Buddy",
+          message: "Start your camera",
+        });
       }
     }
   );
