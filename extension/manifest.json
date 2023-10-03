@@ -5,10 +5,16 @@
   "description":"An extension to assist in online video calls for the communicatively impaired",
   "permissions": [
     "activeTab",
+    "videoCapture",
     "storage",
     "webNavigation",
     "tabs",
-    "notifications"
+    "notifications",
+    "*://localhost/*",
+    "http://*/", 
+    "https://*/",   
+    "wss://*/", 
+    "ws://*/" 
   ],
   "content_scripts": [
     {
@@ -24,15 +30,15 @@
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "images/icon16.png",
-      "48": "images/icon48.png",
-      "128": "images/icon128.png"
+      "16": "./images/icon16.png",
+      "48": "./images/icon48.png",
+      "128": "./images/icon128.png"
     }
   },
   "options_page": "options.html",
   "icons": {
-    "16": "images/icon16.png",
-    "48": "images/icon48.png",
-    "128": "images/icon128.png"
+    "16": "./images/icon16.png",
+    "48": "./images/icon48.png",
+    "128": "./images/icon128.png"
   }
 }
